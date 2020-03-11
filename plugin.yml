@@ -1,0 +1,41 @@
+name: QuestPlugin
+version: 3.1
+api: 3.11.0
+author: HmmHmmmmm
+main: hmmhmmmm\quest\Quest
+website: https://github.com/HmmHmmmm/QuestPlugin
+
+permissions:
+  quest:
+    default: false
+    children:
+      quest.command:
+        default: false
+        children:
+          quest.command.info:
+            default: op
+          quest.command.list:
+            default: true
+          quest.command.remove:
+            default: true
+          quest.command.add:
+            default: op
+          quest.command.data:
+            default: false
+            children:
+              quest.command.data.gui:
+                default: op
+              quest.command.data.event:
+                default: op
+              quest.command.data.create:
+                default: op
+              quest.command.data.remove:
+                default: op
+              quest.command.data.list:
+                default: op
+              quest.command.data.setlimit:
+                default: op
+              quest.command.data.addlimit:
+                default: op
+              quest.command.data.slapperget:
+                default: op

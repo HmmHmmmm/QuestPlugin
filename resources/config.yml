@@ -1,0 +1,24 @@
+#thai=ภาษาไทยนะจ้ะ
+#english=English language
+#You can edit in plugin_data/QuestPlugin/language
+language: english
+
+#yml=Yaml, Information will be in plugin_data/QuestPlugin/quest.yml
+#sqlite=SQLite3, Information will be in plugin_data/QuestPlugin/quest.sqlite3
+questdata-database: sqlite
+
+#yml=Yaml, Information will be in plugin_data/QuestPlugin/account
+#sqlite=SQLite3, Information will be in plugin_data/QuestPlugin/players.sqlite3
+playerdata-database: yml
+
+slapper-update: 10
+
+slapper-type: Human
+
+#It is now not unusable.
+#MySQL-Info:
+  #Host: 127.0.0.1
+  #User: Admin
+  #Password: Admin
+  #Database: QuestPlugin
+  #Port: 3306
