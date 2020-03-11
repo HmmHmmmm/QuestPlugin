@@ -4,6 +4,8 @@ api: 3.11.0
 author: HmmHmmmmm
 main: hmmhmmmm\quest\Quest
 website: https://github.com/HmmHmmmm/QuestPlugin
+depend:
+- Slapper
 
 permissions:
   quest:
