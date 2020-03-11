@@ -79,7 +79,9 @@ class QuestManager{
       $playerQuest->setQuestStart($quest, $start);
       if($playerQuest->getQuestStart($quest) >= $playerQuest->getQuestMax($quest)){
          if($playerQuest->isQuestLimit($quest)){
-            QuestData::addQuestDataLimit($quest, $name);
+            if(QuestData::isQuestData($quest) && QuestData::isQuestDataLimit($quest)){
+               QuestData::addQuestDataLimit($quest, $name);
+            }
          }
          $cmd = str_replace("{player}", $name, $playerQuest->getQuestCommandAward($quest));
          $plugin->getServer()->dispatchCommand(new ConsoleCommandSender(), $cmd);

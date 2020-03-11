@@ -62,8 +62,9 @@ class EventListener implements Listener{
       $player = $event->getEntity();
       $cause = $player->getLastDamageCause();
       if($player instanceof Player){
-         if($cause->getCause() == EntityDamageEvent::CAUSE_ENTITY_ATTACK
-            || $cause->getCause() == EntityDamageEvent::CAUSE_PROJECTILE
+         $c = $cause === null ? EntityDamageEvent::CAUSE_CUSTOM : $cause->getCause();
+         if($c == EntityDamageEvent::CAUSE_ENTITY_ATTACK
+            || $c == EntityDamageEvent::CAUSE_PROJECTILE
          ){
             if($cause instanceof EntityDamageByEntityEvent){
                $damager = $cause->getDamager();
@@ -78,8 +79,9 @@ class EventListener implements Listener{
    public function onEntityDeath(EntityDeathEvent $event){
       $entity = $event->getEntity();
       $cause = $entity->getLastDamageCause();
-      if($cause->getCause() == EntityDamageEvent::CAUSE_ENTITY_ATTACK
-         || $cause->getCause() == EntityDamageEvent::CAUSE_PROJECTILE
+      $c = $cause === null ? EntityDamageEvent::CAUSE_CUSTOM : $cause->getCause();
+      if($c == EntityDamageEvent::CAUSE_ENTITY_ATTACK
+         || $c == EntityDamageEvent::CAUSE_PROJECTILE
       ){
          if($cause instanceof EntityDamageByEntityEvent){
             $damager = $cause->getDamager();
