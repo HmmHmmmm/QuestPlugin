@@ -28,7 +28,7 @@ Download the plugin Slapper [Click here](https://poggit.pmmp.io/p/slapper)
 
 
 **How to use**<br>
-- ?
+- https://youtu.be/jw8HKls-H4w
 
 
 **Command**<br>
